@@ -1,8 +1,8 @@
 from datetime import datetime
 from fastapi import APIRouter, HTTPException
 from sqlmodel import select
-from deps import CurrentUser, SessionDep
-from db.modals import CreateTodo, Todo, TodoUpdate
+from api.deps import CurrentUser, SessionDep
+from api.db.modals import CreateTodo, Todo, TodoUpdate
 from typing import List, Sequence
 from sqlalchemy.exc import SQLAlchemyError
 

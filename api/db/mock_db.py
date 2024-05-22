@@ -3,7 +3,7 @@ from typing import Annotated
 from fastapi import Depends
 from sqlmodel import  create_engine,Session,SQLModel
 
-from config import DATABASE_URL_TEST
+from api.settings import DATABASE_URL_TEST
 
 connection_string = str(DATABASE_URL_TEST).replace(
     "postgresql", "postgresql+psycopg"

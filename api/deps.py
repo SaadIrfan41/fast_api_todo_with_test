@@ -2,12 +2,12 @@ from typing import Annotated
 from fastapi import Depends, HTTPException,status
 from fastapi.security import OAuth2PasswordBearer
 from sqlmodel import Session, select
-from db.mock_db import SessionTestDep
-from core.security import ALGORITHM, verify_password
+from api.db.mock_db import SessionTestDep
+from api.core.security import ALGORITHM, verify_password
 from jose import JWTError, jwt
-from db.modals import TokenPayload, Users
-from config import API_V1_STR, SECRET_KEY
-from db.db_connection import  get_db
+from api.db.modals import TokenPayload, Users
+from api.settings import API_V1_STR, SECRET_KEY
+from api.db.db_connection import  get_db
 from pydantic import ValidationError
 
 

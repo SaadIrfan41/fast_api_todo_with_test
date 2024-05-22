@@ -2,7 +2,7 @@
 from collections.abc import Generator
 from sqlmodel import  create_engine,Session,SQLModel
 
-from config import DATABASE_URL
+from api.settings import DATABASE_URL
 
 
 

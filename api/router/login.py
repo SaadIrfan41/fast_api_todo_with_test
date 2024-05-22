@@ -2,10 +2,10 @@ from datetime import timedelta
 from typing import Annotated
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
-from core.security import create_access_token
-from config import ACCESS_TOKEN_EXPIRE_MINUTES
-from deps import SessionDep, authenticate
-from db.modals import Token
+from api.core.security import create_access_token
+from api.settings import ACCESS_TOKEN_EXPIRE_MINUTES
+from api.deps import SessionDep, authenticate
+from api.db.modals import Token
 
 
 router = APIRouter()
